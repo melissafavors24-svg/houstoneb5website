@@ -1,0 +1,83 @@
+<style>
+  :root{
+    --navy:#003E5B;
+    --card:#FFFFFF;
+    --line:#C7D3E6;
+    --radius:10px;
+  }
+
+  /* ---------- Status change impact table ---------- */
+  .table-wrap{
+    overflow-x:auto;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:0 1px 3px rgba(7,34,44,.04);
+  }
+  table.compare{
+    border-collapse:collapse;
+    width:100%;
+    min-width:560px;
+    font-size:14px;
+  }
+  table.compare th, table.compare td{
+    padding:14px 16px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+    border-right:1px solid var(--line);
+  }
+  table.compare th:first-child, table.compare td:first-child{
+    text-align:left;
+    font-weight:700;
+    color:var(--navy);
+    background:#F5F7FA;
+    position:sticky;
+    left:0;
+  }
+  table.compare thead th{
+    background:var(--navy);
+    color:#fff;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:.3px;
+  }
+  table.compare td.impact-loses{color:#B23B3B;font-weight:800;}
+  table.compare td.impact-none{color:#1E7A3D;font-weight:800;}
+  table.compare td.impact-independent{color:#B98900;font-weight:800;}
+  table.compare tr:last-child td{border-bottom:none;}
+  table.compare td:last-child, table.compare th:last-child{border-right:none;}
+</style>
+
+<div class="table-wrap">
+  <table class="compare">
+    <thead>
+      <tr>
+        <th>Stage</th>
+        <th>Spouse Impact</th>
+        <th>Child Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pre I-526E Approval</td>
+        <td class="impact-loses">Loses Eligibility</td>
+        <td class="impact-none">Continues</td>
+      </tr>
+      <tr>
+        <td>Post I-526E, Pre-Green Card</td>
+        <td class="impact-loses">Loses Eligibility</td>
+        <td class="impact-none">Continues</td>
+      </tr>
+      <tr>
+        <td>Conditional Green Card</td>
+        <td class="impact-independent">Independent I-829</td>
+        <td class="impact-independent">Independent I-829</td>
+      </tr>
+      <tr>
+        <td>Post I-829</td>
+        <td class="impact-none">No Impact</td>
+        <td class="impact-none">No Impact</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
