@@ -1,0 +1,319 @@
+<style>
+  /* ---------- How EB-5 Capital Works ---------- */
+  .eb5-cap{
+    --navy:#003E5B;
+    --card:#FFFFFF;
+    --line:#C7D3E6;
+    --soft:#F5F7FA;
+    --gold:#B98900;
+    --ink:#1F2A33;
+    --muted:#4A5A68;
+    --radius:10px;
+    color:var(--ink);
+    line-height:1.65;
+    font-size:16px;
+  }
+  .eb5-cap *{box-sizing:border-box;}
+  .eb5-cap h2{
+    color:var(--navy);
+    font-size:28px;
+    line-height:1.25;
+    margin:0 0 14px;
+  }
+  .eb5-cap h3{
+    color:var(--navy);
+    font-size:21px;
+    line-height:1.3;
+    margin:0 0 12px;
+    padding-bottom:8px;
+    border-bottom:2px solid var(--line);
+  }
+  .eb5-cap h4{
+    color:var(--navy);
+    font-size:16px;
+    margin:0 0 6px;
+  }
+  .eb5-cap p{margin:0 0 14px;}
+  .eb5-cap section{margin:0 0 40px;}
+  .eb5-cap .lead{font-size:18px;color:var(--muted);}
+
+  /* three-part chain */
+  .eb5-cap .chain{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:18px;
+  }
+  .eb5-cap .chain div{
+    background:var(--soft);
+    border:1px solid var(--line);
+    border-top:4px solid var(--navy);
+    border-radius:var(--radius);
+    padding:14px 16px;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .eb5-cap .chain strong{display:block;color:var(--navy);font-size:15px;margin-bottom:2px;}
+
+  /* cards */
+  .eb5-cap .grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+  }
+  .eb5-cap .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:0 1px 3px rgba(7,34,44,.04);
+    padding:18px 20px;
+  }
+  .eb5-cap .card p{margin:0;font-size:15px;}
+  .eb5-cap .card .tag{
+    display:inline-block;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:4px;
+  }
+  .eb5-cap .card.wide{grid-column:1 / -1;}
+
+  /* capital flow steps */
+  .eb5-cap ol.flow{
+    list-style:none;
+    margin:18px 0 0;
+    padding:0;
+    counter-reset:step;
+  }
+  .eb5-cap ol.flow li{
+    position:relative;
+    padding:0 0 18px 52px;
+    counter-increment:step;
+  }
+  .eb5-cap ol.flow li::before{
+    content:counter(step);
+    position:absolute;
+    left:0;top:0;
+    width:34px;height:34px;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    font-weight:700;
+    font-size:15px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .eb5-cap ol.flow li::after{
+    content:"";
+    position:absolute;
+    left:16px;top:38px;bottom:2px;
+    width:2px;
+    background:var(--line);
+  }
+  .eb5-cap ol.flow li:last-child{padding-bottom:0;}
+  .eb5-cap ol.flow li:last-child::after{display:none;}
+  .eb5-cap ol.flow strong{color:var(--navy);display:block;}
+  .eb5-cap ol.flow span{font-size:15px;color:var(--muted);}
+
+  /* document checklists */
+  .eb5-cap .doc-card{padding:0;overflow:hidden;}
+  .eb5-cap .doc-card h4{
+    background:var(--navy);
+    color:#fff;
+    margin:0;
+    padding:12px 18px;
+    font-size:15px;
+    letter-spacing:.3px;
+  }
+  .eb5-cap ul.check{
+    list-style:none;
+    margin:0;
+    padding:14px 18px 16px;
+  }
+  .eb5-cap ul.check li{
+    position:relative;
+    padding:0 0 10px 24px;
+    font-size:14.5px;
+  }
+  .eb5-cap ul.check li:last-child{padding-bottom:0;}
+  .eb5-cap ul.check li::before{
+    content:"";
+    position:absolute;
+    left:2px;top:7px;
+    width:10px;height:6px;
+    border-left:2px solid var(--navy);
+    border-bottom:2px solid var(--navy);
+    transform:rotate(-45deg);
+  }
+  .eb5-cap ul.check .note{display:block;font-size:13px;color:var(--muted);}
+
+  /* structures comparison */
+  .eb5-cap .compare-cols .card{border-top:4px solid var(--navy);}
+  .eb5-cap .callout{
+    background:var(--soft);
+    border-left:4px solid var(--gold);
+    border-radius:0 var(--radius) var(--radius) 0;
+    padding:16px 20px;
+    margin-top:16px;
+    font-size:15px;
+  }
+  .eb5-cap .callout p:last-child{margin-bottom:0;}
+
+  /* takeaway */
+  .eb5-cap .takeaway{
+    background:var(--navy);
+    color:#fff;
+    border-radius:var(--radius);
+    padding:26px 28px;
+  }
+  .eb5-cap .takeaway h3{color:#fff;border-bottom-color:rgba(255,255,255,.25);}
+  .eb5-cap .takeaway p{margin:0;}
+  .eb5-cap a{color:var(--navy);font-weight:700;}
+
+  @media (max-width:720px){
+    .eb5-cap h2{font-size:24px;}
+    .eb5-cap .grid,
+    .eb5-cap .chain{grid-template-columns:1fr;}
+    .eb5-cap .takeaway{padding:22px 20px;}
+  }
+</style>
+
+<div class="eb5-cap">
+
+  <section>
+    <h2>How EB-5 Capital Works</h2>
+    <p class="lead">EB-5 investments are unique, and sit at the intersection of immigration law and private investment. To work properly, an EB-5 investment must connect three parts:</p>
+    <div class="chain">
+      <div><strong>The Fund</strong>Receives investor money</div>
+      <div><strong>The Project</strong>Spends the capital</div>
+      <div><strong>The Mechanisms</strong>Track and prove job creation</div>
+    </div>
+  </section>
+
+  <section>
+    <h3>The Main Parties</h3>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Investor</span>
+        <h4>Immigrant Investor</h4>
+        <p>Contributes qualifying capital, documents a lawful source and path of funds, and files the immigration forms (I-526E and I-829, sometimes including I-485). Two of the most essential EB-5 requirements are that the investment must remain at risk and create at least ten qualifying U.S. jobs.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Sponsor</span>
+        <h4>EB-5 Regional Center</h4>
+        <p>In the indirect EB-5 route, the regional center sponsors projects and allows indirect and induced jobs to count through accepted economic models (RIMS II, IMPLAN). Under the current RIA framework, regional centers also carry more compliance responsibility, including project filings and promoter oversight.</p>
+      </div>
+      <div class="card">
+        <span class="tag">NCE</span>
+        <h4>New Commercial Enterprise</h4>
+        <p>The fund entity that receives investor money and re-routes it to the project, usually as a loan or preferred equity.</p>
+      </div>
+      <div class="card">
+        <span class="tag">JCE</span>
+        <h4>Job-Creating Entity</h4>
+        <p>The project company that actually spends capital on qualifying activities. Its documented spending is what proves job creation, an essential requirement for EB-5 investors.</p>
+      </div>
+      <div class="card wide">
+        <span class="tag">Oversight</span>
+        <h4>Independent Professionals</h4>
+        <p>Fund administrators, economists, construction monitors, auditors, and counsel help verify project structure and keep the process compliant.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>How Capital Moves</h3>
+    <ol class="flow">
+      <li><strong>Subscription &amp; Escrow</strong><span>The investor signs subscription documents, followed by a wire into escrow.</span></li>
+      <li><strong>Release to the Project</strong><span>After escrow conditions are met, the NCE sends money to the project.</span></li>
+      <li><strong>Deployment</strong><span>The project uses the capital for construction, operating costs, or other approved uses.</span></li>
+      <li><strong>Tracking &amp; Verification</strong><span>A third-party fund administrator tracks spending. Monthly draw packages, inspections, lien waivers, and cost reports create the record needed later for I-829 support.</span></li>
+      <li><strong>Repayment</strong><span>After the sustainment period and project milestones are complete, the project repays or redeems the capital to its EB-5 investors.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>Documentation from Each Party</h3>
+    <div class="grid">
+      <div class="card doc-card">
+        <h4>EB-5 Regional Center</h4>
+        <ul class="check">
+          <li>I-956F filing<span class="note">USCIS form that establishes the project's eligibility before investor petitions can be filed</span></li>
+          <li>Business plan, economic report, budget, schedule, and TEA or rural support<span class="note">Often included in the I-956F filing</span></li>
+          <li>Promoter disclosures and oversight records</li>
+          <li>Fund administration, AML/KYC controls, and a process for material changes</li>
+        </ul>
+      </div>
+      <div class="card doc-card">
+        <h4>NCE</h4>
+        <ul class="check">
+          <li>PPM, operating agreement, subscription agreement, and risk disclosures</li>
+          <li>Loan documents or preferred equity documents</li>
+          <li>Escrow, fund administration, banking resolutions, and redeployment policy</li>
+          <li>Investor notices, capital account records, and distribution statements</li>
+        </ul>
+      </div>
+      <div class="card doc-card">
+        <h4>JCE</h4>
+        <ul class="check">
+          <li>Construction contracts, permits, budget, and schedule</li>
+          <li>Invoices, draw requests, inspections, lien waivers, and payment proofs</li>
+        </ul>
+      </div>
+      <div class="card doc-card">
+        <h4>Investor</h4>
+        <ul class="check">
+          <li>Source-of-funds records, including tax returns, payroll records, sale documents, loan files, and bank statements</li>
+          <li>Immigration filings such as I-526E, I-485, and later I-829</li>
+          <li>Identity and status records, including passports, visas, and civil documents</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Common Capital Structures</h3>
+    <p>Broadly, EB-5 projects use one of two main structures.</p>
+    <div class="grid compare-cols">
+      <div class="card">
+        <h4>Loan Model</h4>
+        <p>The fund lends money to the project. The return is usually a fixed coupon, and the project must follow the loan terms and covenants.</p>
+      </div>
+      <div class="card">
+        <h4>Preferred Equity Model</h4>
+        <p>The fund buys a preferred class in the project or holding entity. Returns depend on the agreement and available cash flow.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <p>In practice, both structures can work well for EB-5 investors, and the availability of each often depends on project design and investor needs. The better structure is the one with stronger governance, cleaner documentation, and clearer evidence. Many offerings favor preferred equity because it can be more flexible for a project sponsor, while a loan can provide stronger remedies if the deal goes off track.</p>
+    </div>
+  </section>
+
+  <section>
+    <h3>How Jobs Are Counted</h3>
+    <p>Regional centers typically use RIMS II or IMPLAN to convert qualified project spending into job numbers. The economic impact report should identify the location, the qualifying costs, the timing, and the job cushion.</p>
+    <p>The project must then follow that model closely. Spending has to be categorized correctly and supported with records. That makes the I-829 process much easier later because the evidence already exists.</p>
+    <p>To read more about job creation methodology and its importance to EB-5 investors, <a href="#">see our article here</a>.</p>
+  </section>
+
+  <section>
+    <h3>Tips to Investors</h3>
+    <p>The following is a list of practices that is worth ensuring a regional center is following for a smoother EB-5 process:</p>
+    <div class="card doc-card">
+      <ul class="check">
+        <li>Synchronizes funding and filings so capital is not taken before escrow terms are clear.</li>
+        <li>Documents spending in real time with draw packages and reports ready when needed.</li>
+        <li>Confirms loan maturities and project timelines cover the sustainment period.</li>
+        <li>Publishes a clear redeployment policy if capital may return early.</li>
+        <li>Trains all team members and agents to avoid unauthorized promises about timing, returns, or approvals.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="takeaway">
+    <h3>Key Takeaway</h3>
+    <p>EB-5 projects work when every link in the chain is traceable and professionally managed. The investor proves lawful funds, the regional center and NCE maintain a clean structure, and the JCE spends against a documented budget. When these things happen, financing can close, the project can be built, and investors can realize their immigration goals.</p>
+  </section>
+
+</div>
