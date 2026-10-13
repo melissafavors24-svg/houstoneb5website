@@ -1,0 +1,88 @@
+<style>
+  /* ---------- Documentation from Each Party ---------- */
+  .eb5-docs{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    color:#1F2A33;
+    line-height:1.65;
+    font-size:16px;
+  }
+  .eb5-docs *{box-sizing:border-box;}
+  .eb5-docs .doc-card{
+    background:#FFFFFF;
+    border:1px solid #C7D3E6;
+    border-radius:10px;
+    box-shadow:0 1px 3px rgba(7,34,44,.04);
+    overflow:hidden;
+  }
+  .eb5-docs h4{
+    background:#003E5B;
+    color:#FFFFFF;
+    margin:0;
+    padding:12px 18px;
+    font-size:15px;
+    letter-spacing:.3px;
+  }
+  .eb5-docs ul{
+    list-style:none;
+    margin:0;
+    padding:14px 18px 16px;
+  }
+  .eb5-docs li{
+    position:relative;
+    margin:0;
+    padding:0 0 10px 24px;
+    font-size:14.5px;
+  }
+  .eb5-docs li:last-child{padding-bottom:0;}
+  .eb5-docs li::before{
+    content:"";
+    position:absolute;
+    left:2px;top:7px;
+    width:10px;height:6px;
+    border-left:2px solid #003E5B;
+    border-bottom:2px solid #003E5B;
+    transform:rotate(-45deg);
+  }
+  .eb5-docs .note{display:block;font-size:13px;color:#4A5A68;}
+  @media (max-width:720px){
+    .eb5-docs{grid-template-columns:1fr;}
+  }
+</style>
+
+<div class="eb5-docs">
+  <div class="doc-card">
+    <h4>EB-5 Regional Center</h4>
+    <ul>
+      <li>I-956F filing<span class="note">USCIS form that establishes the project's eligibility before investor petitions can be filed</span></li>
+      <li>Business plan, economic report, budget, schedule, and TEA or rural support<span class="note">Often included in the I-956F filing</span></li>
+      <li>Promoter disclosures and oversight records</li>
+      <li>Fund administration, AML/KYC controls, and a process for material changes</li>
+    </ul>
+  </div>
+  <div class="doc-card">
+    <h4>NCE</h4>
+    <ul>
+      <li>PPM, operating agreement, subscription agreement, and risk disclosures</li>
+      <li>Loan documents or preferred equity documents</li>
+      <li>Escrow, fund administration, banking resolutions, and redeployment policy</li>
+      <li>Investor notices, capital account records, and distribution statements</li>
+    </ul>
+  </div>
+  <div class="doc-card">
+    <h4>JCE</h4>
+    <ul>
+      <li>Construction contracts, permits, budget, and schedule</li>
+      <li>Invoices, draw requests, inspections, lien waivers, and payment proofs</li>
+    </ul>
+  </div>
+  <div class="doc-card">
+    <h4>Investor</h4>
+    <ul>
+      <li>Source-of-funds records, including tax returns, payroll records, sale documents, loan files, and bank statements</li>
+      <li>Immigration filings such as I-526E, I-485, and later I-829</li>
+      <li>Identity and status records, including passports, visas, and civil documents</li>
+    </ul>
+  </div>
+</div>
