@@ -1,0 +1,68 @@
+<style>
+  /* ---------- How Capital Moves (navy background) ---------- */
+  .eb5-flow-dark{
+    background:#003E5B;
+    color:#FFFFFF;
+    border-radius:10px;
+    padding:28px 28px 30px;
+    line-height:1.65;
+    font-size:16px;
+  }
+  .eb5-flow-dark *{box-sizing:border-box;}
+  .eb5-flow-dark h3{
+    color:#FFFFFF;
+    font-size:21px;
+    line-height:1.3;
+    margin:0 0 18px;
+    padding-bottom:8px;
+    border-bottom:2px solid rgba(255,255,255,.25);
+  }
+  .eb5-flow-dark ol{
+    list-style:none;
+    margin:0;
+    padding:0;
+    counter-reset:step;
+  }
+  .eb5-flow-dark li{
+    position:relative;
+    padding:0 0 18px 52px;
+    counter-increment:step;
+  }
+  .eb5-flow-dark li::before{
+    content:counter(step);
+    position:absolute;
+    left:0;top:0;
+    width:34px;height:34px;
+    border-radius:50%;
+    background:#FFFFFF;
+    color:#003E5B;
+    font-weight:700;
+    font-size:15px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .eb5-flow-dark li::after{
+    content:"";
+    position:absolute;
+    left:16px;top:38px;bottom:2px;
+    width:2px;
+    background:rgba(255,255,255,.3);
+  }
+  .eb5-flow-dark li:last-child{padding-bottom:0;}
+  .eb5-flow-dark li:last-child::after{display:none;}
+  .eb5-flow-dark strong{color:#FFFFFF;display:block;}
+  .eb5-flow-dark span{font-size:15px;color:rgba(255,255,255,.85);}
+  @media (max-width:720px){
+    .eb5-flow-dark{padding:22px 20px 24px;}
+  }
+</style>
+
+<div class="eb5-flow-dark">
+  <h3>How Capital Moves</h3>
+  <ol>
+    <li><strong>Subscription &amp; Escrow</strong><span>The investor signs subscription documents, followed by a wire into escrow.</span></li>
+    <li><strong>Release to the Project</strong><span>After escrow conditions are met, the NCE sends money to the project.</span></li>
+    <li><strong>Deployment</strong><span>The project uses the capital for construction, operating costs, or other approved uses.</span></li>
+    <li><strong>Tracking &amp; Verification</strong><span>A third-party fund administrator tracks spending. Monthly draw packages, inspections, lien waivers, and cost reports create the record needed later for I-829 support.</span></li>
+    <li><strong>Repayment</strong><span>After the sustainment period and project milestones are complete, the project repays or redeems the capital to its EB-5 investors.</span></li>
+  </ol>
+</div>
