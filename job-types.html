@@ -1,0 +1,48 @@
+<style>
+  /* ---------- Direct / Indirect / Induced Jobs ---------- */
+  .eb5-jobtypes{
+    color:#1F2A33;
+    line-height:1.65;
+    font-size:16px;
+  }
+  .eb5-jobtypes *{box-sizing:border-box;}
+  .eb5-jobtypes .chain{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+  .eb5-jobtypes .chain div{
+    background:#F5F7FA;
+    border:1px solid #C7D3E6;
+    border-top:4px solid #003E5B;
+    border-radius:10px;
+    padding:14px 16px;
+    font-size:14px;
+    color:#4A5A68;
+  }
+  .eb5-jobtypes .chain strong{display:block;color:#003E5B;font-size:15px;margin-bottom:2px;}
+  .eb5-jobtypes .callout{
+    background:#F5F7FA;
+    border-left:4px solid #B98900;
+    border-radius:0 10px 10px 0;
+    padding:16px 20px;
+    margin:16px 0 0;
+    font-size:15px;
+  }
+  .eb5-jobtypes .callout p{margin:0;}
+
+  @media (max-width:720px){
+    .eb5-jobtypes .chain{grid-template-columns:1fr;}
+  }
+</style>
+
+<div class="eb5-jobtypes">
+  <div class="chain">
+    <div><strong>Direct Jobs</strong>Jobs at the new commercial enterprise or job-creating entity.</div>
+    <div><strong>Indirect Jobs</strong>Jobs at suppliers and vendors tied to the project.</div>
+    <div><strong>Induced Jobs</strong>Jobs supported when workers spend their income locally.</div>
+  </div>
+  <div class="callout">
+    <p>These models do <strong>not</strong> measure profit or business success. They only estimate how qualifying spending can translate into employment.</p>
+  </div>
+</div>
