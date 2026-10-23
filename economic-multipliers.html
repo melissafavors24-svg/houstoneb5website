@@ -145,6 +145,24 @@
   }
   .eb5-mult .callout p:last-child{margin-bottom:0;}
 
+  /* navy-background section */
+  .eb5-mult section.dark{
+    background:var(--navy);
+    color:#fff;
+    border-radius:var(--radius);
+    padding:26px 28px;
+  }
+  .eb5-mult section.dark h3{color:#fff;border-bottom-color:rgba(255,255,255,.25);}
+  .eb5-mult section.dark h4{color:#fff;}
+  .eb5-mult section.dark .card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+    border-top:4px solid #fff;
+    box-shadow:none;
+  }
+  .eb5-mult section.dark .card p{color:rgba(255,255,255,.85);}
+  .eb5-mult section.dark > p:last-child{margin-bottom:0;}
+
   /* takeaway */
   .eb5-mult .takeaway{
     background:var(--navy);
@@ -161,7 +179,8 @@
     .eb5-mult .grid,
     .eb5-mult .grid.three,
     .eb5-mult .chain{grid-template-columns:1fr;}
-    .eb5-mult .takeaway{padding:22px 20px;}
+    .eb5-mult .takeaway,
+    .eb5-mult section.dark{padding:22px 20px;}
   }
 </style>
 
@@ -185,7 +204,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="dark">
     <h3>Common Modeling Tools</h3>
     <p>Two tools are commonly used in EB-5 practice:</p>
     <div class="grid compare-cols">
