@@ -1,0 +1,56 @@
+<style>
+  /* ---------- Job-Years vs. Operational Jobs ---------- */
+  .eb5-jobyears{
+    color:#1F2A33;
+    line-height:1.65;
+    font-size:16px;
+  }
+  .eb5-jobyears *{box-sizing:border-box;}
+  .eb5-jobyears .grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+  }
+  .eb5-jobyears .card{
+    background:#FFFFFF;
+    border:1px solid #C7D3E6;
+    border-top:4px solid #003E5B;
+    border-radius:10px;
+    box-shadow:0 1px 3px rgba(7,34,44,.04);
+    padding:18px 20px;
+  }
+  .eb5-jobyears .tag{
+    display:inline-block;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:#B98900;
+    margin-bottom:4px;
+  }
+  .eb5-jobyears h4{
+    color:#003E5B;
+    font-size:16px;
+    margin:0 0 6px;
+  }
+  .eb5-jobyears p{margin:0;font-size:15px;}
+
+  @media (max-width:720px){
+    .eb5-jobyears .grid{grid-template-columns:1fr;}
+  }
+</style>
+
+<div class="eb5-jobyears">
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Construction</span>
+      <h4>Job-Years</h4>
+      <p>One full-time job for one year. Construction jobs are usually counted this way.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Operations</span>
+      <h4>Operational Jobs</h4>
+      <p>The ongoing positions created after the project opens.</p>
+    </div>
+  </div>
+</div>
